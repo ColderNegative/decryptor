@@ -18,17 +18,16 @@ def getUserInput(sel):
         message = decypher(shift, cypher, 0)
         print(message)
     elif sel == 1:
-        print("Message to be decyphered: ")
-        cypher = input()
-        autodecrypt(cypher)
-    elif sel == 2:
         print("What is the shift: ")
         shift = input()
         print("enter cypher: ")
         cypher = input()
         message = decypher(shift, cypher, 1)
         print(message)
-
+    elif sel == 2:
+            print("Message to be decyphered: ")
+            cypher = input()
+            autodecrypt(cypher)
 
 def crossCheck(list1, element):
     x = 0
@@ -93,13 +92,13 @@ def autodecrypt(cy):
         matchList.append(x)
     shiftNum = max(matchList)
     shift = matchList.index(shiftNum)
-    print(shift)
+    print("\nShift: " + str(shift))
     message = decypher(str(shift), cy, 0)
     print(message)
 
     
 
-print("What would you like to do: \ndecrypt: 0\nauto-decrypt: 1\nEncrypt: 2")
+print("What would you like to do: \ndecrypt: 0\nEncrypt: 1\nauto-decrypt: 2")
 userInput = input()
 getUserInput(int(userInput))
 
