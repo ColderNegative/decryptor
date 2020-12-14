@@ -96,7 +96,7 @@ def autodecrypt(cy):
     message = decypher(str(shift), cy, 0)
     print(message)
 
-    
+
 
 print("What would you like to do: \ndecrypt: 0\nEncrypt: 1\nauto-decrypt: 2")
 userInput = input()
